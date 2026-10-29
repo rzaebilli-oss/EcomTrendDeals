@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcomTrendDeals</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .auth-buttons button {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .auth-buttons button.register {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .auth-buttons button:hover {
+            opacity: 0.9;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .package-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .package-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        .package-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            margin: 1rem 0;
+        }
+
+        .package-card button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">EcomTrendDeals</div>
+        <div class="auth-buttons">
+            <button onclick="alert('Login düyməsi klikləndi')">Login</button>
+            <button class="register" onclick="alert('Register düyməsi klikləndi')">Register</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>E-ticarət Paketləri və Analitika</h1>
+            <p>Mağazanızı böyütmək üçün ən son trend məhsullar və xüsusi siyahılar.</p>
+        </div>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3>Paket 1: Ebay Popular Açar Sözlər</h3>
+                <p>Mağaza adı ilə axtarış edərək rəqiblərinizi üstələyin və ən çox tələb olunan açar sözləri əldə edin.</p>
+                <div class="price">Pulsuz</div>
+                <button onclick="alert('Paket 1 seçildi')">Əldə Et</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Paket 2: Rəqib Analizi</h3>
+                <p>Rəqiblərinizin satış strategiyalarını izləyin və bazar payınızı artırın.</p>
+                <div class="price">Pulsuz</div>
+                <button onclick="alert('Paket 2 seçildi')">Əldə Et</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Paket 3: Ən Çox Satış Edən Dropshopper Siyahısı</h3>
+                <p>Ən çox satılan məhsulların vizual fotolu və təfərrüatlı siyahısı.</p>
+                <div class="price">Pulsuz</div>
+                <button onclick="alert('Paket 3 seçildi')">Əldə Et</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Paket 4: Trenddə Olan Məhsullar</h3>
+                <p>Heç bir analiz etmədən birbaşa satışa başlaya biləcəyiniz maksimum 5 adət trend məhsul.</p>
+                <div class="price">Pulsuz</div>
+                <button onclick="alert('Paket 4 seçildi')">Əldə Et</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Paket 5: $1.99 Hot Deal</h3>
+                <p>Xüsusi endirimlərlə sərfəli qiymətə məhsul təklifləri.</p>
+                <div class="price">$1.99</div>
+                <button onclick="alert('Paket 5 seçildi')">Satın Al</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 EcomTrendDeals. Bütün hüquqlar qorunur.
+    </footer>
+
+</body>
+</html>
